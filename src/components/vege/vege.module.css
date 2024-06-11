@@ -1,0 +1,114 @@
+.allDepart {
+    background-color: #7FAD39;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.depart {
+    border: 1.5px solid #EBEBEB;
+    padding: 30px;
+}
+
+.depart h5 {
+    font-size: 17px;
+    font-weight: 350;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+.vege {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.allCat {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+.sec1 {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #EBEBEB;
+    gap: 10px;
+    padding: 10px;
+    height: 7vh;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.down {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 10px;
+}
+
+.sec1 input {
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.search button {
+    background-color: #7FAD39;
+    border: none;
+    color: white;
+    height: 7vh;
+    padding: 10px;
+    width: 7vw;
+    cursor: pointer;
+}
+
+.line {
+    height: 3vh;
+    border: 1px solid #EBEBEB;
+}
+
+.tele {
+    background-color: #EBEBEB;
+    color: #7FAD39;
+    border-radius: 50%; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;  
+  height: 50px; 
+}
+
+.number {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.imgCon {
+    position: relative;
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.background {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.overText {
+    position: absolute;
+    top: 80px; /* Adjust the top position as needed */
+    left: 30px; /* Adjust the left position as needed */
+    padding: 10px; /* Optional: padding around the text */
+    font-size: 20px; 
+}
