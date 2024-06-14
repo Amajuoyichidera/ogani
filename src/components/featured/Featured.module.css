@@ -1,0 +1,68 @@
+.galleryContainer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .buttonsContainer {
+    margin-bottom: 20px;
+  }
+  
+  .category-button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .category-button.active, .category-button:hover {
+    background-color: #ccc;
+  }
+  
+  .imagesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .imageCard {
+    flex: 1 1 calc(25% - 20px); /* Adjusts for 4 images horizontally */
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .imageCard img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .imageCard p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .imageCard {
+      flex: 1 1 calc(50% - 20px); /* Adjusts for 2 images horizontally on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category-button {
+      padding: 5px 10px;
+    }
+  
+    .imageCard {
+      flex: 1 1 calc(100% - 20px); /* Adjusts for 1 image horizontally on smallest screens */
+    }
+  }
+  

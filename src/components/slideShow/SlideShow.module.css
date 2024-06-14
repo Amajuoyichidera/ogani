@@ -1,0 +1,83 @@
+.slideshowContainer {
+    position: relative;
+    width: 83%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 25%; /* Show 4 slides at a time on desktop */
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .overlayText {
+    position: absolute;
+    bottom: 10px;
+    left: 55px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 11vw;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .slide {
+      min-width: 50%; /* Show 2 slides at a time on tablets and mobile screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlayText {
+      font-size: 12px; /* Adjust text size for smaller screens */
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+  
+    .prev, .next {
+      padding: 10px; /* Adjust button size for smaller screens */
+      font-size: 14px;
+    }
+  }
+  

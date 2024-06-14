@@ -20,7 +20,7 @@ const Vege = () => {
         'Fresh Bananas']
   return (
     <div className={styles.vege}>
-        <div>
+        <div className={styles.departCon}>
             <section onClick={() => setShowDepart(!showDepart)} className={styles.allDepart}>
                 <h4>All Departments</h4>
                 <section>{showDepart ? <FaAngleDown /> : <FaAngleUp />}</section>
