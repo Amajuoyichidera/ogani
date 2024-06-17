@@ -1,0 +1,11 @@
+.summer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.summer img {
+    width: 39%;
+}

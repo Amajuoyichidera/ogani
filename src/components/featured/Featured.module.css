@@ -1,14 +1,16 @@
 .galleryContainer {
-    width: 80%;
+    width: 85%;
     margin: auto;
     text-align: center;
+    padding-top: 50px;
   }
   
   .buttonsContainer {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
   
-  .category-button {
+  .categoryButton {
     margin: 5px;
     padding: 10px 20px;
     border: none;
@@ -17,7 +19,7 @@
     transition: background-color 0.3s;
   }
   
-  .category-button.active, .category-button:hover {
+  .categoryButtonActive, .categoryButton:hover {
     background-color: #ccc;
   }
   
@@ -28,26 +30,20 @@
   }
   
   .imageCard {
-    flex: 1 1 calc(25% - 20px); /* Adjusts for 4 images horizontally */
     margin: 10px;
-    box-sizing: border-box;
     position: relative;
   }
-  
-  .imageCard img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+
   .imageCard p {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    margin: 0;
+    font-size: 20px;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
   
   @media (max-width: 768px) {
@@ -57,7 +53,7 @@
   }
   
   @media (max-width: 480px) {
-    .category-button {
+    .categoryButton {
       padding: 5px 10px;
     }
   

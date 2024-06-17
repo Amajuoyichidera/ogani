@@ -8,6 +8,7 @@ import mango from '../../assets/mango.jpg'
 import meat from '../../assets/meat.jpg'
 import waterMelon from '../../assets/waterMelon.jpg'
 import styles from './Featured.module.css'
+import MyH1 from '../myH1/MyH1'
 
 const images = [
     { src: apple, category: 'Fruit', name: 'Apple', price: 30.00 },
@@ -32,22 +33,26 @@ const Featured = () => {
 
   return (
     <div className={styles.galleryContainer}>
-    <div className={styles.buttonsContainer}>
-      {categories.map((category) => (
-        <button
-          key={category}
-          className={`category-button ${selectedCategory === category ? 'active' : ''}`}
-          onClick={() => setSelectedCategory(category)}
-        >
-          {category}
-        </button>
-      ))}
-    </div>
+        <MyH1 text='Featured Product' />
+        <div className={styles.buttonsContainer}>
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`${styles.categoryButton} ${selectedCategory === category ? styles.categoryButtonActive : ''}`}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
     <div className={styles.imagesContainer}>
       {filteredImages.map((image, index) => (
         <div className={styles.imageCard} key={index}>
           <img src={image.src} alt={image.name} />
-          <p>{image.name}</p>
+          <div className={styles.name}>
+           <p>{image.name}</p>
+           <h3>$ {image.price}</h3>
+          </div>
         </div>
       ))}
     </div>

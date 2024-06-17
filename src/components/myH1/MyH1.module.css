@@ -1,0 +1,10 @@
+.myH1 {
+    font-size: 40px;
+}
+
+.line {
+    color: black;
+    width: 7vw;
+    border: 2px solid #7FAD39;
+    margin: 0px auto;
+}
