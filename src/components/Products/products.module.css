@@ -18,7 +18,8 @@
 .container {
     display: flex;
     justify-content: center;
-    gap: 230px;
+    gap: 240px;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
   

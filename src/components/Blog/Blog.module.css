@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.img {
+    width: 95%;
+}
+
+.date {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.calender {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #B2B2B2;
+}

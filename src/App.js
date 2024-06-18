@@ -5,6 +5,8 @@ import Featured from './components/featured/Featured';
 import Summer from './components/Summer/Summer';
 import Products from './components/Products/Products';
 import Blog from './components/Blog/Blog';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
     <Summer />
     <Products />
     <Blog />
+    <Footer />
     </>
   );
 }

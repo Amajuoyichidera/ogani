@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F3F6FA;
+}
+
+footer p {
+    line-height: 35px;
+}
+
+footer h3 {
+    padding-bottom: 10px;
+}
+
+.logo {
+    padding-bottom: 20px;
+}
+
+.placeholder {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.placeholder input {
+    width: 17vw;
+    outline: none;
+    border: none;
+    height: 5.5vh;
+    padding: 22px;
+}
+
+.placeholder button {
+    background-color: #7FAD39;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+}
