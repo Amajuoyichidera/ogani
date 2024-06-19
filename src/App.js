@@ -12,7 +12,6 @@ import styles from './styles.module.css';
 function App() {
   const { scrollYProgress } = useScroll();
 
-
   return (
     <>
     <motion.div

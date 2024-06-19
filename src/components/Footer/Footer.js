@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Logo from '../../assets/logo.png';
 import { FaFacebookF, FaPinterest } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'
-
+import { useInView, motion  } from "framer-motion";
 
 const MyIcon = (props) => {
     return (
@@ -14,7 +14,22 @@ const MyIcon = (props) => {
 }
 
 const Footer = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false });
+  
+    const variants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 }
+    };
+
   return (
+    <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
     <footer>
         <div>
             <img className={styles.logo} src={Logo} alt='logo' />
@@ -59,6 +74,7 @@ const Footer = () => {
             </section>
         </div>
     </footer>
+    </motion.div>
   )
 }
 

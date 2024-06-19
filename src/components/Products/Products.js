@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import product1 from '../../assets/product1.jpg';
 import product2 from '../../assets/product2.jpg';
 import product3 from '../../assets/product3.jpg';
-import styles from './products.module.css'
+import styles from './products.module.css';
+import { useInView, motion  } from "framer-motion";
 
 const MyProduct = ({text}) => {
     const item = [
@@ -10,7 +11,23 @@ const MyProduct = ({text}) => {
         {name: 'Fresh Pepper', price: 20.00, image: product2},
         {name: 'Chicken', price: 40.00, image: product3}
     ]
+
+    const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
     return (
+        <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <div>
             <h2 className={styles.head}>{text}</h2>
 
@@ -26,6 +43,7 @@ const MyProduct = ({text}) => {
                 ))}
             </div>
         </div>
+        </motion.div>
     )
 }
 const Products = () => {
