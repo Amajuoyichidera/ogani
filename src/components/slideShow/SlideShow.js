@@ -22,7 +22,7 @@ const SlideShow = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         nextSlide();
-      }, 3000);
+      }, 2000);
       return () => clearInterval(interval);
     }, [currentIndex]);
   

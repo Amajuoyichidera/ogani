@@ -50,6 +50,9 @@
     .imageCard {
       flex: 1 1 calc(50% - 20px); /* Adjusts for 2 images horizontally on smaller screens */
     }
+    .imageCard img {
+      width: 100%;
+    }
   }
   
   @media (max-width: 480px) {

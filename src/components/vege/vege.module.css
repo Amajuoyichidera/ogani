@@ -134,4 +134,73 @@
 .overText h1 {
     font-size: 40px;
     line-height: 60px;
+    font-weight: bolder;
+}
+
+.overText h5 {
+    color: #7FAD39;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .vege {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .departCon {
+        width: 350px;
+    }
+
+    .allCat {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 20px;
+    }
+
+    .down, .line {
+        display: none;
+    }
+
+    .allDepart {
+        gap: 150px;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search button {
+        width: 110px;
+    }
+
+    .sec1 input {
+        width: 215px;
+    }
+
+    .number {
+        padding-left: 30px;
+    }
+    
+    .overText button {
+        width: 120px;
+    }
+
+    .overText h5 {
+        color: #7FAD39;
+    }
+
+    .background {
+        object-fit: fill;
+        height: 380px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .overText {
+        top: 60px;
+    }
 }

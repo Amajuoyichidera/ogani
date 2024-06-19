@@ -59,3 +59,15 @@ footer h3 {
     height: 40px; 
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .placeholder input {
+        width: 220px;
+    }
+}

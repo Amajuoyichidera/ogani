@@ -9,3 +9,16 @@
 .summer img {
     width: 39%;
 }
+
+@media (max-width: 768px) {
+    .summer {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .summer img {
+        width: 90%;
+    }
+}

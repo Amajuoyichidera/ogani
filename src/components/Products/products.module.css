@@ -23,3 +23,16 @@
     padding-bottom: 30px;
 }
   
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .head {
+        padding-bottom: 20px;
+    }
+}
