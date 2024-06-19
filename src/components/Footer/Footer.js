@@ -5,6 +5,14 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'
 
 
+const MyIcon = (props) => {
+    return (
+        <section className={styles.icon}>
+            {props.icon}
+        </section>
+    )
+}
+
 const Footer = () => {
   return (
     <footer>
@@ -43,11 +51,11 @@ const Footer = () => {
                 <button>SUBSCRIBE</button>
             </section>
 
-            <section className={styles.icon}>
-                <FaFacebookF />
-                <FaXTwitter />
-                <FaInstagram />
-                <FaPinterest />
+            <section className={styles.icons}>
+                <MyIcon icon={<FaFacebookF />} />
+                <MyIcon icon={ <FaXTwitter />} />
+                <MyIcon icon={ <FaInstagram />} />
+                <MyIcon icon={ <FaPinterest />} />
             </section>
         </div>
     </footer>

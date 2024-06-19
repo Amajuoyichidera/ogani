@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import MyH1 from '../myH1/MyH1'
 import blog1 from '../../assets/blog-1.jpg'
 import blog2 from '../../assets/blog-2.jpg'
@@ -7,7 +8,22 @@ import { FaCalendar, FaComment } from 'react-icons/fa6'
 import styles from './Blog.module.css';
 
 const MyBlog = (props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
     return (
+        <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         <div>
             <img className={styles.img} src={props.image} />
             <div className={styles.date}>
@@ -24,6 +40,7 @@ const MyBlog = (props) => {
             <h3>{props.text}</h3>
             <p>Sed quia non numquam modi tempora indunt ut <br /> labore et dolore magnam aliquam quaerat</p>
         </div>
+        </motion.div>
     )
 }
 

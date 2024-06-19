@@ -22,7 +22,7 @@ footer h3 {
 
 .placeholder {
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -40,4 +40,22 @@ footer h3 {
     font-weight: bold;
     border: none;
     padding: 15px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.icon {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
 }

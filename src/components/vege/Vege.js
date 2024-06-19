@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion';
 import { FaAngleUp, FaAngleDown } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import Banner from '../../assets/banner.jpg';
@@ -18,18 +19,43 @@ const Vege = () => {
         'Papayaya & Crisps',
         'Oatmeal',
         'Fresh Bananas']
+
+        const ref = useRef(null);
+        const isInView = useInView(ref, { once: false });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+
   return (
-    <div className={styles.vege}>
+    <motion.div
+    ref={ref}
+    variants={variants}
+    initial="hidden"
+    animate={isInView ? 'visible' : 'hidden'}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    className="reveal-element"
+  >
+     <div className={styles.vege}>
         <div className={styles.departCon}>
             <section onClick={() => setShowDepart(!showDepart)} className={styles.allDepart}>
                 <h4>All Departments</h4>
                 <section>{showDepart ? <FaAngleDown /> : <FaAngleUp />}</section>
             </section>
-            {showDepart && <section className={styles.depart}>
-                {department.map((item) => <h5>{item}</h5>)}
-            </section>}
+             {showDepart &&<motion.section
+                className={styles.depart}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: showDepart ? 'auto' : 0, opacity: showDepart ? 1 : 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                style={{ overflow: 'hidden' }}
+               >
+        {department.map((item, index) => (
+          <h5 key={index}>{item}</h5>
+        ))}
+      </motion.section>}
         </div>
-
 
         <div>
             <div className={styles.allCat}>
@@ -66,6 +92,7 @@ const Vege = () => {
             </div>
         </div>
     </div>
+  </motion.div>
   )
 }
 

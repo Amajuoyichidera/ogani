@@ -1,4 +1,5 @@
-import React,{ useState } from 'react'
+import React,{ useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import apple from '../../assets/apple.jpg'
 import banana from '../../assets/banana.jpg'
 import berry from '../../assets/berry.jpg'
@@ -25,6 +26,14 @@ const images = [
 
 const Featured = () => {
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
     const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredImages = selectedCategory === 'All'
@@ -45,6 +54,13 @@ const Featured = () => {
           </button>
         ))}
       </div>
+      <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
     <div className={styles.imagesContainer}>
       {filteredImages.map((image, index) => (
         <div className={styles.imageCard} key={index}>
@@ -56,6 +72,7 @@ const Featured = () => {
         </div>
       ))}
     </div>
+    </motion.div>
   </div>
   )
 }
