@@ -25,7 +25,7 @@ const MyBlog = (props) => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <div>
-            <img className={styles.img} src={props.image} />
+            <img alt='blog' className={styles.img} src={props.image} />
             <div className={styles.date}>
                 <div className={styles.calender}>
                     <FaCalendar />

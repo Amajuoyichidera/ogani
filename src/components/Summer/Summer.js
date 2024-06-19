@@ -7,8 +7,8 @@ import styles from './Summer.module.css';
 const Summer = () => {
   return (
     <div className={styles.summer}>
-        <img src={banner1} />
-        <img src={banner2} />
+        <img alt='banner1' src={banner1} />
+        <img alt='banner2' src={banner2} />
     </div>
   )
 }

@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer>
         <div>
-            <img className={styles.logo} src={Logo} />
+            <img className={styles.logo} src={Logo} alt='logo' />
             <p>Address: 60-49 Road 11378 New York</p>
             <p>Phone: +65 11.188.888</p>
             <p>Email: hello@colorlib.com</p>

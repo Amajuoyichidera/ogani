@@ -17,7 +17,7 @@ const MyProduct = ({text}) => {
             <div>
                 {item.map((goods) => (
                     <div className={styles.card}>
-                        <img src={goods.image} />
+                        <img alt={goods.name} src={goods.image} />
                         <div>
                             <p>{goods.name}</p>
                             <h5>${goods.price}</h5>

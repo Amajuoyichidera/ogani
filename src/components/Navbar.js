@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
             {/* <div className="navbar-logo">Logo</div> */}
-            <img src={Logo} />
+            <img src={Logo} alt='logo' />
             <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
                 <a href="#home" className="navbar-item">Home</a>
                 <a href="#about" className="navbar-item">About</a>

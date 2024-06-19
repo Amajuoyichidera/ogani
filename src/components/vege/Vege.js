@@ -88,7 +88,7 @@ const Vege = () => {
                     <p>Free Pickup and Delivery Available</p>
                     <button>Shop Now</button>
                 </section>
-                    <img className={styles.background} src={Banner} />
+                    <img className={styles.background} src={Banner} alt='banner' />
             </div>
         </div>
     </div>
