@@ -64,7 +64,11 @@ const Featured = () => {
     <div className={styles.imagesContainer}>
       {filteredImages.map((image, index) => (
         <div className={styles.imageCard} key={index}>
+          <div  className={styles.imageContainer}>
           <img src={image.src} alt={image.name} />
+          <div className={styles.borderTop}></div>
+          <div className={styles.borderBottom}></div>
+          </div>
           <div className={styles.name}>
            <p>{image.name}</p>
            <h3>$ {image.price}</h3>

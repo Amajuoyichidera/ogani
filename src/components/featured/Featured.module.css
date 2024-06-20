@@ -45,6 +45,51 @@
     padding-top: 10px;
     padding-bottom: 30px;
   }
+/* HoverImage.module.css */
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.imageContainer img {
+  display: block;
+  cursor: pointer;
+}
+
+.borderTop,
+.borderBottom {
+  position: absolute;
+  height: 4px;
+  background-color: #7FAD39;
+  transition: width 0.5s ease;
+}
+
+.borderTop {
+  top: 0;
+  left: 100%;
+  width: 0;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.borderBottom {
+  bottom: 0;
+  right: 100%;
+  width: 0;
+  transition: width 0.5s ease, right 0.5s ease;
+}
+
+.imageContainer:hover .borderTop {
+  width: 100%;
+  left: 0;
+}
+
+.imageContainer:hover .borderBottom {
+  width: 100%;
+  right: 0;
+}
+
+
   
   @media (max-width: 768px) {
     .imageCard {
