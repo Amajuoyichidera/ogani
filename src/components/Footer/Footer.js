@@ -35,7 +35,7 @@ const Footer = () => {
             <img className={styles.logo} src={Logo} alt='logo' />
             <p>Address: 60-49 Road 11378 New York</p>
             <p>Phone: +65 11.188.888</p>
-            <p>Email: hello@colorlib.com</p>
+            <p>Email: amajuoyichideradavid@gmail.com</p>
         </div>
 
         <div>
